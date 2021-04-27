@@ -1,0 +1,162 @@
+@import "variables";
+@import "mdbootstrap/scss/mdb.free.scss";
+
+$background: #ffffff;
+$title-color: #ff6a3d;
+
+html{
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  text-align: justify;
+  background: $background;
+}
+
+#header {
+  .navbar{
+    transition: background-color 750ms;
+  }
+  
+  .navbar-dark {
+    background-color: $primary;
+  }
+  
+  .navbar-brand{
+    font-family: 'Garamond';
+  }
+}
+
+#home {
+  .home-bg {
+    background-image: url("http://localhost:8080/assets/background-01.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    // top: 0;
+    z-index: 1;
+  }
+  
+  
+  .home-content{
+    position: relative;
+    background-image: url("http://localhost:8080/assets/background-01.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    .home-mask {
+      background-color: rgba($primary, 0.75);
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-attachment: fixed;
+    }
+
+    .container{
+      z-index: 3;
+      color: white;
+      
+      h1{
+        font-size: 2.5em;
+      }
+
+      h3{
+        background-color: $primary;
+        font-size: 3.5em;
+      }
+
+      .slogan{
+        font-size: 1.5em;
+      }
+
+      // .btn{
+      //   animation-name: 'button-highlight';
+      //   animation-duration: 4s;
+      //   animation-iteration-count: infinite;
+      // }
+    }
+  }
+}
+
+.section-wraper {
+  // min-height: 100%;
+  padding-top: 59px;
+  
+  .title {
+    // color: $title-color;
+    color: $primary;
+  }
+  
+  h1.title {
+    font-size: 3.5em;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  h2.title {
+    font-size: 2em;
+  }
+  
+  p {
+    font-size: 1.25em;
+  }
+  
+  .card .card-header {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .card .card-title {
+    color: $primary;
+  }
+  
+  .badge{
+    background-color: white !important;
+    color: #7886da;
+    border-left: 1px solid #7886da;
+    border-radius: 0;
+    font-weight: bold;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+}
+
+// .section-wraper.full {
+//   height: 100%;
+//   width: 100%;
+// }
+
+.fas {
+  color: $secondary;
+}
+
+.list-group-item {
+  border: 0;
+  font-size: 1.25em;
+}
+
+.list-group-item .fas {
+  width: 25px;
+  text-align: center;
+}
+
+
+@keyframes button-highlight {
+  0% {
+    // background-color: red;
+
+  }
+  100% {
+    // background-color: yellow;
+  }
+}
